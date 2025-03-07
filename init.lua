@@ -30,15 +30,6 @@ local opts = {
 	},
 }
 
-local null_ls = require("null-ls")
-
--- Setup null-ls
-null_ls.setup({
-	sources = {
-	  null_ls.builtins.formatting.prettier,
-	},
-})
-
 -- Load the options from the config/options.lua file
 require("config.options")
 -- Load the keymaps from the config/keymaps.lua file
