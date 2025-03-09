@@ -11,7 +11,7 @@ return {
                 load_on_setup = true,
                 theme_conf = { border = true },
                 previewer = false,
-           }.
+           },
         })
     end,
 }
