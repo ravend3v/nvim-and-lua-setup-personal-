@@ -1,4 +1,14 @@
 return {
+    -- cmp-nvim-lsp provides language specific completion suggestions to nvim-cmp
+    {
+        "hrsh7th/cmp-nvim-lsp",
+    },
+
+    -- copilot
+
+    {
+        "github/copilot.vim"
+    },
     {
         "L3MON4D3/LuaSnip",
         dependencies = {
@@ -7,10 +17,6 @@ return {
             -- provide vscode like snippets to cmp
             "rafamadriz/friendly-snippets",
         }
-    },
-    -- cmp-nvim-lsp provides language specific completion suggestions to nvim-cmp
-    {
-        "hrsh7th/cmp-nvim-lsp",
     },
     -- nvim-cmp provides auto completion and auto completion dropdown ui
     {
