@@ -51,7 +51,7 @@ return {
             local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
             -- Language servers to setup
-            local servers = { "lua_ls", "tsserver", "cssls" }
+            local servers = { "lua_ls", "ts_ls", "cssls" }
 
             -- Setup each language server
             for _, server in ipairs(servers) do
