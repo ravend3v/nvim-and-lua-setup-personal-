@@ -14,10 +14,11 @@ return {
                 nvimtree = true,
                 cmp = true,
                 gitsigns = true,
-                lualine = true,
+                -- ⚠️ Remove Lualine from here and set it up separately
             },
         })
-        vim.cmd.colorscheme("catppuccin-mocha") -- Set Catppuccin Mocha as the default theme
+
+        -- Apply the colorscheme
+        vim.cmd.colorscheme("catppuccin-mocha")
     end,
 }
-
