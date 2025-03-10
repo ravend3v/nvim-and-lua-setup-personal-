@@ -3,12 +3,25 @@ return {
     'akinsho/toggleterm.nvim',
     config = function()
         require("toggleterm").setup{
+
+            vim.o.termguicolors = true
+            
+            -- Load catpuccin theme
+            require("catpuccin").setup({
+                flavour = "mocha",
+                integrations = {
+                    toggleterm = true,
+                },
+            })
+            vim.cmd.colorscheme("catpuccin")
+
+
             -- Add configuration here
             size = 20,
             open_mapping = [[<c-\>]],
             hide_numbers = true, -- hide the number column in toggleterm buffers
             shade_filetypes = {},
-            shade_terminals = true,
+            shade_terminals = false,
             shading_factor = '1',
             start_in_insert = true,
             insert_mappings = true, -- whether or not the open mapping applies in insert mode
