@@ -4,15 +4,6 @@ return {
     config = function()
         -- Enable true color support
         vim.o.termguicolors = true
-        
-        -- Load catpuccin theme
-        require("catpuccin").setup({
-            flavour = "mocha",
-            integrations = {
-                toggleterm = true,
-            },
-        })
-        vim.cmd.colorscheme("catpuccin")
 
         -- Define a custom highlight group with a darker background
         vim.cmd [[
