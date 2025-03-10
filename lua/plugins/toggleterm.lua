@@ -1,6 +1,6 @@
 -- Add toggleterm plugin
 return {
-    'akinsho/nvim-toggleterm.nvim',
+    'akinsho/toggleterm.nvim',
     tag= '*',
     config = function()
         require("toggleterm").setup{
