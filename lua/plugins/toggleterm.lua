@@ -2,20 +2,24 @@
 return {
     'akinsho/toggleterm.nvim',
     config = function()
+        -- Enable true color support
+        vim.o.termguicolors = true
+        
+        -- Load catpuccin theme
+        require("catpuccin").setup({
+            flavour = "mocha",
+            integrations = {
+                toggleterm = true,
+            },
+        })
+        vim.cmd.colorscheme("catpuccin")
+
+        -- Define a custom highlight group with a darker background
+        vim.cmd [[
+            highlight DarkBackground guibg=#1e1e1e
+        ]]
+
         require("toggleterm").setup{
-
-            vim.o.termguicolors = true
-            
-            -- Load catpuccin theme
-            require("catpuccin").setup({
-                flavour = "mocha",
-                integrations = {
-                    toggleterm = true,
-                },
-            })
-            vim.cmd.colorscheme("catpuccin")
-
-
             -- Add configuration here
             size = 20,
             open_mapping = [[<c-\>]],
@@ -34,7 +38,7 @@ return {
                 winblend = 0,
                 highlights = {
                     border = "Normal",
-                    background = "Normal",
+                    background = "DarkBackground", -- Use the custom highlight group
                 }
             }
         }
