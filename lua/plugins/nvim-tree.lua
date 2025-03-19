@@ -85,6 +85,16 @@ return {
 					error = icons.diagnostics.BoldError,
 				},
 			},
+            git = {
+                enable = true,
+                ignore = false,
+                timeout = 1000,
+            },
+
+            filters = {
+                dotfiles = false,
+                custom = {},
+            },
 		})
 	end,
 }
