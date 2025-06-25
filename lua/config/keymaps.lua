@@ -43,3 +43,7 @@ vim.keymap.set("v", "<leader>y", '"+y', { desc = "Copy to clipboard" })
 -- Paste from system clipboard
 vim.keymap.set("n", "<leader>p", '"+p', { desc = "Paste from clipboard" })
 
+-- Find in current file with fuzzy search and preview
+vim.keymap.set("n", "<leader>fs", function()
+  require('telescope.builtin').current_buffer_fuzzy_find()
+end, { desc = "[F]ind in current file [S]earch" })
