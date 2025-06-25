@@ -19,10 +19,10 @@ vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" }
 vim.keymap.set("n", "<leader>t", ':ToggleTerm<CR>', { desc = "Toggle terminal" })
 
 -- Better window navigation
-vim.keymap.set("n", "<C-h>", ":wincmd h<cr>", { desc = "Move focus to the left window" })
-vim.keymap.set("n", "<C-l>", ":wincmd l<cr>", { desc = "Move focus to the right window" })
-vim.keymap.set("n", "<C-j>", ":wincmd j<cr>", { desc = "Move focus to the lower window" })
-vim.keymap.set("n", "<C-k>", ":wincmd k<cr>", { desc = "Move focus to the upper window" })
+vim.keymap.set("n", "<leader><Left>", ":wincmd h<cr>", { desc = "Move focus to the left window" })
+vim.keymap.set("n", "<leader><Right>", ":wincmd l<cr>", { desc = "Move focus to the right window" })
+vim.keymap.set("n", "<leader><Down>", ":wincmd j<cr>", { desc = "Move focus to the lower window" })
+vim.keymap.set("n", "<leader><Up>", ":wincmd k<cr>", { desc = "Move focus to the upper window" })
 
 vim.keymap.set("n", "<leader>tc", ":tabnew<cr>", {desc = "[T]ab [C]reat New"})
 vim.keymap.set("n", "<leader>tn", ":tabnext<cr>", {desc = "[T]ab [N]ext"})
@@ -37,6 +37,8 @@ vim.keymap.set("n", "<leader>wh", ":split<cr>", { desc = "[W]indow Split [H]oriz
 vim.keymap.set("v", "<", "<gv", { desc = "Indent left in visual mode" })
 vim.keymap.set("v", ">", ">gv", { desc = "Indent right in visual mode" })
 
+-- Undo
+vim.keymap.set("n", 'C-z', 'u', { noremap = true, silent = true, desc = "Undo" })
 
 -- Copy to system clipboard
 vim.keymap.set("v", "<leader>y", '"+y', { desc = "Copy to clipboard" })

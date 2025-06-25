@@ -69,6 +69,18 @@ return {
                         "--hidden",
                         "--glob=!.git/",
                     },
+                    file_ignore_patterns = {
+                        "node_modules",
+                        ".git/",
+                        "dist/",
+                        "build/",
+                        "%.lock",
+                        "%.cache",
+                        "%.min%.js",
+                        "%.min%.css",
+                        "net8.0/",
+                        "obj/",
+                    },
                 },
                 -- set keymappings to navigate through items in the telescope io
                 mappings = {

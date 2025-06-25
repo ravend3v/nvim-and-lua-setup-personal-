@@ -85,11 +85,6 @@ return {
                 },
             }
 
-            vim.diagnostic.config(default_diagnostic_config)
-
-            for _, sign in ipairs(vim.tbl_get(vim.diagnostic.config(), "signs", "values") or {}) do
-                vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = sign.name })
-            end
 
             -- Key mappings for LSP
             local keymap_opts = { desc = "[C]ode [H]over Documentation" }
