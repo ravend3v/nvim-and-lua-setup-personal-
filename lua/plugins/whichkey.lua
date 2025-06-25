@@ -6,25 +6,17 @@ return {
         which_key.setup()
 
         -- Updated registration using the new spec
-        which_key.register({
+        which_key.add({
             { "<leader>/", group = "Comments" },
-            { "<leader>/_", hidden = true },
             { "<leader>J", group = "[J]ava" },
-            { "<leader>J_", hidden = true },
             { "<leader>c", group = "[C]ode" },
-            { "<leader>c_", hidden = true },
             { "<leader>d", group = "[D]ebug" },
-            { "<leader>d_", hidden = true },
             { "<leader>e", group = "[E]xplorer" },
-            { "<leader>e_", hidden = true },
             { "<leader>f", group = "[F]ind" },
-            { "<leader>f_", hidden = true },
             { "<leader>g", group = "[G]it" },
-            { "<leader>g_", hidden = true },
             { "<leader>t", group = "[T]ab" },
-            { "<leader>t_", hidden = true },
+            { "<leader>th", "<cmd>Themery<cr>", desc = "Theme selector" },
             { "<leader>w", group = "[W]indow" },
-            { "<leader>w_", hidden = true },
-        }, { mode = "n" }) -- normal mode registration
+        })
     end
 }
