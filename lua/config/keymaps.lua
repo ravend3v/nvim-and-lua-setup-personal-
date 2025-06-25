@@ -15,9 +15,6 @@ vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" }
 -- vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
 -- vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 
--- Key mapping to toggle terminal
-vim.keymap.set("n", "<leader>t", ':ToggleTerm<CR>', { desc = "Toggle terminal" })
-
 -- Better window navigation
 vim.keymap.set("n", "<leader><Left>", ":wincmd h<cr>", { desc = "Move focus to the left window" })
 vim.keymap.set("n", "<leader><Right>", ":wincmd l<cr>", { desc = "Move focus to the right window" })
